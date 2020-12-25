@@ -8,6 +8,7 @@
       <e p="bin" t="ExcludeRecursive" />
       <e p="BossAttack.cs" t="Include" />
       <e p="Change.cs" t="Include" />
+      <e p="CharacterLeveling.cs" t="Include" />
       <e p="MassiveEdit.cs" t="Include" />
       <e p="MassiveIterating.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive">

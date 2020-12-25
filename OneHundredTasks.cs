@@ -7,7 +7,7 @@ namespace oneHundredTasks
     {
         public static void Main()
         {
-
+            CharacterLeveling.Do();
         }
     }
 }
