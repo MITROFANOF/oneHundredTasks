@@ -6,6 +6,7 @@
     <e p="C:\Users\vanyo\RiderProjects\oneHundredTasks" t="IncludeRecursive">
       <e p=".gitignore" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
+      <e p="BossAttack.cs" t="Include" />
       <e p="Change.cs" t="Include" />
       <e p="MassiveEdit.cs" t="Include" />
       <e p="MassiveIterating.cs" t="Include" />
