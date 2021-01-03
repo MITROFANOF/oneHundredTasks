@@ -1,10 +1,12 @@
-﻿namespace oneHundredTasks
+﻿using oneHundredTasks.BossAttackOOP;
+
+namespace oneHundredTasks
 {
     public static class OneHundredTasks
     {
         public static void Main()
         {
-            DoList.Do();
+            Game.Play();
         }
     }
 }

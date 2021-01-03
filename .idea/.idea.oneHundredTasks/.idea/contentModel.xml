@@ -7,6 +7,12 @@
       <e p=".gitignore" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="BossAttack.cs" t="Include" />
+      <e p="BossAttackOOP" t="Include">
+        <e p="Attack.cs" t="Include" />
+        <e p="Boss.cs" t="Include" />
+        <e p="Game.cs" t="Include" />
+        <e p="Player.cs" t="Include" />
+      </e>
       <e p="Change.cs" t="Include" />
       <e p="CharacterLeveling.cs" t="Include" />
       <e p="DoList.cs" t="Include" />
