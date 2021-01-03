@@ -5,21 +5,22 @@ namespace oneHundredTasks
 {
     public static class BossAttack
     {
-        private static int _health = 1000;
         private const int Armor = 20;
+        private static int _health = 1000;
 
         public static void Do()
         {
-
             var isRandomAttack = GetRandomFromZeroTo(2) == 0;
 
-            PrintMessage("Босс может атаковать в двух режимах: все атаки по очереди и случайной атакой", ConsoleColor.Yellow);
-            PrintMessage("Босс будет атаковать: " + (isRandomAttack ? "случайно" : "все атаки по очереди"), ConsoleColor.Yellow);
+            PrintMessage("Босс может атаковать в двух режимах: все атаки по очереди и случайной атакой",
+                ConsoleColor.Yellow);
+            PrintMessage("Босс будет атаковать: " + (isRandomAttack ? "случайно" : "все атаки по очереди"),
+                ConsoleColor.Yellow);
             PrintMessage("Нажмите enter для начала боя", ConsoleColor.Green);
             Console.ReadLine();
 
             var attackNumber = 0;
-            
+
             while (_health > 0)
             {
                 Console.Clear();
@@ -31,15 +32,15 @@ namespace oneHundredTasks
                 }
                 else
                 {
-                    Attack(attackNumber%3);
+                    Attack(attackNumber % 3);
 
                     attackNumber++;
                 }
 
                 Thread.Sleep(4000);
             }
-            PrintMessage("Бой закончен, вы погибли", ConsoleColor.DarkGray);
 
+            PrintMessage("Бой закончен, вы погибли", ConsoleColor.DarkGray);
         }
 
         private static int GetRandomFromZeroTo(int number)
@@ -70,7 +71,7 @@ namespace oneHundredTasks
 
         private static void TakeDamage(int damage)
         {
-            _health -= (damage - Armor);
+            _health -= damage - Armor;
         }
 
         private static void PrintMessage(string text, ConsoleColor color)

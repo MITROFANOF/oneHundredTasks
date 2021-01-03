@@ -4,7 +4,6 @@ namespace oneHundredTasks
 {
     public static class CharacterLeveling
     {
-        
         public static void Do()
         {
             int age = 0, strength = 0, agility = 0, intelligence = 0, points = 25;
@@ -24,7 +23,8 @@ namespace oneHundredTasks
                 Console.WriteLine(@"Что вы хотите сделать? +\-");
                 var operation = Console.ReadLine();
 
-                Console.WriteLine(@"Колличество поинтов которые следует {0}", operation == "+" ? "прибавить" : "отнять");
+                Console.WriteLine(@"Колличество поинтов которые следует {0}",
+                    operation == "+" ? "прибавить" : "отнять");
                 var operandPoints = ParseInt();
 
                 switch (subject?.ToLower())
@@ -43,10 +43,9 @@ namespace oneHundredTasks
 
             Console.WriteLine("Вы распределили все очки. Введите возраст персонажа:");
             age = ParseInt();
-            
+
             Console.Clear();
             ShowStats(points, age, strength, agility, intelligence);
-
         }
 
         private static int ParseInt()
@@ -57,22 +56,24 @@ namespace oneHundredTasks
             {
                 operandPointsRaw = Console.ReadLine();
             } while (!int.TryParse(operandPointsRaw, out parsedInt));
+
             return parsedInt;
         }
-        
+
         private static void ShowStats(int points, int age, int strength, int agility, int intelligence)
         {
-            Console.WriteLine("Поинтов - {0}\nВозраст - {1}\nСила - [{2}]\nЛовкость - [{3}]\nИнтелект - [{4}]",points, age, GetLineForAbility(strength), GetLineForAbility(agility), GetLineForAbility(intelligence));
+            Console.WriteLine("Поинтов - {0}\nВозраст - {1}\nСила - [{2}]\nЛовкость - [{3}]\nИнтелект - [{4}]", points,
+                age, GetLineForAbility(strength), GetLineForAbility(agility), GetLineForAbility(intelligence));
         }
-        
+
         private static string GetLineForAbility(int value)
         {
             return "".PadLeft(value, '#').PadRight(10, '_');
         }
-        
+
         private static int ApplyChangesToAbility(ref int ability, int delta)
         {
-            int oldAbility = ability;
+            var oldAbility = ability;
             ability = Clamp(ability + delta, 0, 10);
             return oldAbility - ability;
         }
@@ -86,7 +87,7 @@ namespace oneHundredTasks
 
             return value;
         }
-        
+
         private static void ChangeStat(int operandPoints, ref int stat, ref int points, string operation)
         {
             points += ApplyChangesToAbility(ref stat, operandPoints * (operation == "+" ? 1 : -1));

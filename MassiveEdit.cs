@@ -27,7 +27,7 @@
             var largerArray = new int[_array.Length + 1];
             for (var i = 0; i < index; i++) largerArray[i] = _array[i];
             largerArray[index] = valueToAdd;
-            for (var i = index; i < _array.Length; i++) largerArray[i+1] = _array[i];
+            for (var i = index; i < _array.Length; i++) largerArray[i + 1] = _array[i];
             _array = largerArray;
         }
 
@@ -37,11 +37,11 @@
             for (var i = 0; i < smallerArray.Length - 1; i++) smallerArray[i] = _array[i];
             _array = smallerArray;
         }
-        
+
         public static void Block5()
         {
             var smallerArray = new int[_array.Length - 1];
-            for (var i = 0; i < smallerArray.Length - 1; i++) smallerArray[i] = _array[i+1];
+            for (var i = 0; i < smallerArray.Length - 1; i++) smallerArray[i] = _array[i + 1];
             _array = smallerArray;
         }
 
@@ -49,7 +49,7 @@
         {
             var smallerArray = new int[_array.Length - 1];
             for (var i = 0; i < index; i++) smallerArray[i] = _array[i];
-            for (var i = index; i < smallerArray.Length - 1; i++) smallerArray[i] = _array[i+1];
+            for (var i = index; i < smallerArray.Length - 1; i++) smallerArray[i] = _array[i + 1];
             _array = smallerArray;
         }
 
@@ -57,7 +57,7 @@
         {
             var largerArray = new int[arr1.Length + arr2.Length];
             for (var i = 0; i < arr1.Length; i++) largerArray[i] = arr1[i];
-            for (var i = 0; i < arr2.Length; i++) largerArray[i+arr1.Length] = arr2[i];
+            for (var i = 0; i < arr2.Length; i++) largerArray[i + arr1.Length] = arr2[i];
             return largerArray;
         }
     }
