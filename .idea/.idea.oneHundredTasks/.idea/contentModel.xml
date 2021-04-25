@@ -21,6 +21,10 @@
         <e p="Skill.cs" t="Include" />
       </e>
       <e p="DoList.cs" t="Include" />
+      <e p="DoListOOP" t="Include">
+        <e p="Game.cs" t="Include" />
+        <e p="GoalList.cs" t="Include" />
+      </e>
       <e p="MassiveEdit.cs" t="Include" />
       <e p="MassiveIterating.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive">

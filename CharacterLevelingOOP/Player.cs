@@ -28,7 +28,8 @@ namespace oneHundredTasks.CharacterLevelingOOP
         public void ShowStats()
         {
             Console.WriteLine($"Поинтов - {SkillPoints}\nВозраст - {Age}");
-            foreach (var skill in Skills) BossAttackOOP.Game.PrintMessage($"{skill.Name} - {GetLineForAbility(skill.Value)}", ConsoleColor.Red);
+            foreach (var skill in Skills)
+                BossAttackOOP.Game.PrintMessage($"{skill.Name} - {GetLineForAbility(skill.Value)}", ConsoleColor.Red);
         }
 
         private static string GetLineForAbility(int value)

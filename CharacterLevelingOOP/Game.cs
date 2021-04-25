@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace oneHundredTasks.CharacterLevelingOOP
 {
@@ -30,9 +29,8 @@ namespace oneHundredTasks.CharacterLevelingOOP
                 var operandPoints = ParseInt();
 
                 foreach (var skill in player.Skills)
-                {
-                    if (subject?.ToLower() == skill.Name?.ToLower()) player.DistributePoints(skill, operandPoints, operation);
-                }
+                    if (subject?.ToLower() == skill.Name?.ToLower())
+                        player.DistributePoints(skill, operandPoints, operation);
             }
 
             Console.WriteLine("Вы распределили все очки. Введите возраст персонажа:");
@@ -53,6 +51,5 @@ namespace oneHundredTasks.CharacterLevelingOOP
 
             return parsedInt;
         }
-        
     }
 }
